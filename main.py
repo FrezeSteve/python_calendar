@@ -14,3 +14,8 @@ for i in range(datetime_object['current_month'], datetime_object['number_of_mont
     number_of_months = monthrange(datetime_object['year'], i)[1]
     month = month_name[i]
     print(number_of_months, "%s" % month)
+
+# clears all variables in memory
+for name in dir():
+    if not name.startswith('_') and not name.startswith('__'):
+        del locals()[name]
